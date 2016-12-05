@@ -18,6 +18,23 @@ public class NumberTest {
         Number n = new Number();
         String result = n.stringCalc(1, 2);
         assertEquals(String.format("%d,%d", 1, 5), result);
-
     }
+	
+@Test
+    public void divisionTwoNumberFail(){
+        Int n = new Int();
+	try{
+        Int result = n.divisionCalc(0, 0);
+	fail("Se esperaba una excepción")
+	}catch(BRException e){
+	}
+    }
+
+@Test
+    public void divisionTwoNumber(){
+        Int n = new Int();
+        Int result = n.divisionCalc(2, 2);
+    }
+
+
 }
